@@ -1,61 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><style>
-        /* 全局設定 */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ff0000;
-            color:#FFFFFF;
-            margin: 0px;
-            padding:30px;
-            text-align: center;
-        }
-        #openMapButton {
-        position: absolute;
-        width: 200px;
-        margin-left: -100px;
-        border-radius: 5px;
-        bottom: 30px;
-        padding: 10px;
-        cursor: pointer;
-        border: none;
-        color: #FFFFFF;
-        background-color: #222222;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>基本練習</title>
+
+        <style>
+            /* CSS */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #FFFFFF;
+                color: #000000;
+                text-align: center;
+            }
+
+
+            #openMapButton {
+                position: absolute;
+                width: 200px;
+                margin-left: -100px;
+                border-radius: 5px;
+                bottom: 10px;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                color: #FFFFFF;
+                background-color: #222222;
                 
- }
- #imgDiv{
-    position:absolute;
-    
-    left: 50%;
-    margin-left: -125px;
+            }
 
-    top: 50%;
-    margin-top: -150px;
-    
-    
-    width: 250px;
-    height: 300px;
-    background-color: red;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 50%;
-}
+            #imgDiv{
+                position:absolute;
+                
+                left: 50%;
+                margin-left: -150px;
 
-    </style>
-</head>
-<body>
-    Hello World 
-    <br>
-    <button id="openMapButton">地圖</button>
-    <div id="imgDiv">
-        <img src="./image/centerimage.jpg" >
-    </div>
+                top: 50%;
+                margin-top: -150px;
+               
+                width: 300px;
+                height: 300px;
+                /* background-color: red; */
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+          
     
-</body>
+        </style>
+
+
+    </head>
+    <body>
+        元宇宙學程實戰
+
+        <BR>
+        
+        <div id="imgDiv">
+            <img src="./images/centerImg.jpg">
+        </div>
+        
+        <button id="openMapButton" onclick="goPage()">開啟地圖</button>
+        <!-- <button class="myButton">點擊我 2</button> -->
+
+        <script>
+            // JavaScript 內嵌在這裡
+            // 宣告變數
+            let name = "Alice"; // 可以更改
+            const age = 25;     // 不可更改
+            var city = "Taipei"; // 可更改 (舊方式)
+
+            name = "Jack";
+            //age = age + 1;
+
+            // 顯示在控制台
+            console.log("Name:", name);
+            console.log("Age:", age);
+            console.log("City:", city);
+
+            name = "May";
+            console.log("Name:", name);
+            
+            greet("Marry");
+            greet(name);
+            greet("Jerromy");
+            greet();
+
+            function greet( who = "Orange" ) {
+                console.log("HI," + who + "! ");
+            }
+
+            function goPage(){
+                window.location.href = "https://tw.yahoo.com";
+            }
+
+        </script>
+        
+    </body>
 </html>
